@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="tableView" destination="kDk-CC-g9c" id="cYG-Fe-2Zn"/>
                         <segue destination="4vz-XK-0D3" kind="show" identifier="addSegue" id="vx9-us-SN9"/>
+                        <segue destination="gFP-11-k0e" kind="show" identifier="selectTaskSegue" id="7t4-6S-Y1D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +118,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3B-RS-UiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="36.431784107946029"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="WEt-BN-42D">
+            <objects>
+                <viewController id="gFP-11-k0e" customClass="CompleteTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8rR-lm-tqs"/>
+                        <viewControllerLayoutGuide type="bottom" id="w4c-Eg-OcB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hBw-5u-OOu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-Eu-jEx">
+                                <rect key="frame" x="166" y="84" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-t1-YPk">
+                                <rect key="frame" x="154.5" y="130" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="gFP-11-k0e" eventType="touchUpInside" id="3gi-zt-OAy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IDi-Eu-jEx" firstAttribute="top" secondItem="8rR-lm-tqs" secondAttribute="bottom" constant="20" id="QR2-Hj-iYa"/>
+                            <constraint firstItem="qfl-t1-YPk" firstAttribute="centerX" secondItem="hBw-5u-OOu" secondAttribute="centerX" id="U6h-Gg-TlR"/>
+                            <constraint firstItem="qfl-t1-YPk" firstAttribute="top" secondItem="IDi-Eu-jEx" secondAttribute="bottom" constant="25" id="gRL-yb-Xty"/>
+                            <constraint firstItem="IDi-Eu-jEx" firstAttribute="centerX" secondItem="hBw-5u-OOu" secondAttribute="centerX" id="zLq-U1-mSZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="IDi-Eu-jEx" id="y8I-v4-dj4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXN-9j-NH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="795"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RUL-mI-znc">
